@@ -2,7 +2,7 @@
 
 *Puppeteer、Selenium、Playwright を用いた動的Webスクレイピング向けの、完全自動化されたヘッドレスブラウザソリューションです。Scraping Browser は Bright Data のインフラ上で GUI として開きます。*  
 
-[![Promo](https://github.com/luminati-io/LinkedIn-Scraper/raw/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.jp/products/scraping-browser) 
+[![Promo](https://github.com/bright-jp/LinkedIn-Scraper/raw/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.jp/products/scraping-browser) 
 
 🔗 **[無料で始める](https://brightdata.jp/products/scraping-browser)** | 📖 **[公式ドキュメント](https://docs.brightdata.com/scraping-automation/scraping-browser/introduction)**  
 
@@ -149,7 +149,7 @@ const client = await page.target().createCDPSession();
 const { status } = await client.send('Captcha.solve', { detectTimeout: 30000 });
 ```
 
-> **🤖 当社の [CAPTCHA Solver](https://github.com/luminati-io/Captcha-solver) について詳しく見る。**
+> **🤖 当社の [CAPTCHA Solver](https://github.com/bright-jp/Captcha-solver) について詳しく見る。**
 
 ## 🔄 自動 IP ローテーション & アンロック  
 Scraping Browser は、統合された [ローテーティングプロキシ](https://brightdata.jp/solutions/rotating-proxies) によりIPを自動でローテーションし、シームレスなデータ収集のためにリトライを処理します。 
